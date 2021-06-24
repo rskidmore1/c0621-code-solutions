@@ -45,6 +45,8 @@ select {
 
 input[type="button"] {
   float: right;
+  width: 100px;
+  height: inherit;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 15px;
