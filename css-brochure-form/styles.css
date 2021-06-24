@@ -1,0 +1,77 @@
+.box {
+  margin: auto;
+  width: 600px;
+  border: 3px;
+  padding: 10px;
+  border-color: gray;
+}
+
+.inputs {
+  margin-bottom: 5%;
+}
+
+/*
+h2 {
+  font-family: 'Brandon Grotesque';
+  font-style: normal;
+  font-weight: 500;
+  text-align: center;
+  color: #ec5d57;
+}
+
+form {
+  font-family: 'Brandon Grotesque';
+  font-style: normal;
+  font-weight: 500;
+}
+*/
+
+input[type="text"],
+select {
+  font-size: 18px;
+
+  /* border-width: thin; */
+  border-color: green;
+  width: 100%;
+  border-radius: 7px;
+  padding: 15px;
+  color: #999;
+}
+
+select {
+  background-color: #f3f3f3;
+  color: black;
+}
+
+input[type="button"] {
+  float: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 20px;
+  background-color: #ec5d57;
+  color: white;
+  border: none;
+}
+
+label {
+  padding-left: 12px;
+}
+
+/*
+input[type="text"] {
+  width: 100%;
+  border-radius: 7px;
+  padding: 10px;
+}
+
+*/
+
+
+
+/* red color #EC5D57
+
+grey text in boxes 999999
+
+grey in drop down #F3F3F3 */
