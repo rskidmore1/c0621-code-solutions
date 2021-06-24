@@ -31,18 +31,10 @@ p {
   flex-basis: calc(100% / 4);
 }
 
-#two-thirds {
+.two-thirds {
   width: 70%;
 }
 
-#one-third {
-  width: 30%;
-}
-
-#two-thirds2 {
-  width: 70%;
-}
-
-#one-third2 {
+.one-third {
   width: 30%;
 }
