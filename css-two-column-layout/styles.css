@@ -13,6 +13,24 @@
   display: flex;
 }
 
+.header-row {
+  justify-content: center;
+  display: flex;
+}
+
+.header {
+  justify-content: center;
+  display: flex;
+}
+
+.head-text {
+  line-height: 2rem;
+  width: 70%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 button {
   border-color: #d14c45;
   background-color: white;
@@ -38,10 +56,6 @@ img {
   margin-top: 0.85rem;
 }
 
-.header-text {
-  margin-bottom: -30px;
-}
-
 .header-subtext {
   line-height: 2rem;
   width: 70%;
@@ -51,6 +65,7 @@ img {
 h1 {
   font-size: 2.7rem;
   letter-spacing: 0.38rem;
+  text-align: center;
 }
 
 h1,
@@ -70,5 +85,4 @@ p {
 .box-text {
   width: 80%;
   line-height: 1.7rem;
-  margin-top: -0.2rem;
 }
