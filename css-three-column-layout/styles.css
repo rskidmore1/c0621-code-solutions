@@ -43,11 +43,6 @@ h3 {
 }
 
 .col-one-third {
-  flex-basis: calc(100% / 3);
-  text-align: center;
-}
-
-.col {
   margin: 1rem;
   flex-basis: calc(100% / 3);
   text-align: center;
