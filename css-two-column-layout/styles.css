@@ -16,19 +16,41 @@
 button {
   border-color: #d14c45;
   background-color: white;
+  border-width: 0.13rem;
   color: #d14c45;
-  padding-left: 1.2rem;
-  padding-right: 1.2rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  font-weight: bold;
+  padding-left: 2.6rem;
+  padding-right: 2.6rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
 }
 
 .image {
-  width: 30%;
+  width: 25%;
+}
+
+img {
+  width: 100%;
 }
 
 .text {
-  width: %;
+  width: 70%;
+  margin-top: 0.85rem;
+}
+
+.header-text {
+  margin-bottom: -30px;
+}
+
+.header-subtext {
+  line-height: 2rem;
+  width: 70%;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.7rem;
+  letter-spacing: 0.38rem;
 }
 
 h1,
@@ -42,4 +64,11 @@ p {
   font-family: 'Karla', sans-serif;
   font-style: normal;
   font-weight: lighter;
+  color: #454545;
+}
+
+.box-text {
+  width: 80%;
+  line-height: 1.7rem;
+  margin-top: -0.2rem;
 }
