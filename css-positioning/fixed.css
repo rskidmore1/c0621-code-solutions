@@ -9,5 +9,5 @@ html {
   /* your code here */
   position: fixed;
   top: 10px;
-  left: 400px;
+  width: 100%;
 }

@@ -5,6 +5,7 @@
   background-size: cover;
 
   /* your code here */
+  position: relative;
 }
 
 .meme > img {
@@ -17,7 +18,7 @@
   /* your code here */
   position: absolute;
   top: 35px;
-  left: 230px;
+  right: 15px;
 }
 
 .joke {
@@ -32,7 +33,7 @@
   /* your code here */
   position: absolute;
   left: 10px;
-  top: 170px;
+  bottom: 10px;
   width: 300px;
 }
 
@@ -40,4 +41,6 @@
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
 
   /* your code here */
+  height: 300px;
+  width: 300px;
 }
