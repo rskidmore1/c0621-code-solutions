@@ -1,0 +1,62 @@
+/* blue background 1996DA */
+
+body {
+  background-color: #1996da;
+}
+
+h1,
+h2,
+p,
+h3 {
+  text-align: center;
+}
+
+p {
+  line-height: 1.4rem;
+}
+
+h1 {
+  font-weight: lighter;
+}
+
+h3 {
+  font-size: larger;
+  font-weight: light;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 910px;
+  font-family: 'Lato', sans-serif;
+  color: white;
+}
+
+.paragraph {
+  margin-left: 1.2rem;
+  margin-right: 1.2rem;
+}
+
+.row {
+  justify-content: center;
+  display: flex;
+}
+
+.col-one-third {
+  margin: 1rem;
+  flex-basis: calc(100% / 3);
+  text-align: center;
+}
+
+.image-div {
+  background-color: white;
+  border-radius: 100%;
+  width: 5rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+img {
+  width: 100%;
+  padding: 30%;
+}
