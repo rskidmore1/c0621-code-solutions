@@ -28,5 +28,18 @@ button {
 }
 
 .text {
-  width: 70%;
+  width: %;
+}
+
+h1,
+h3 {
+  font-family: 'Karla', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+p {
+  font-family: 'Karla', sans-serif;
+  font-style: normal;
+  font-weight: lighter;
 }
