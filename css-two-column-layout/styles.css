@@ -1,0 +1,32 @@
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 910px;
+}
+
+.row {
+  justify-content: center;
+  display: flex;
+}
+
+.inner-row {
+  display: flex;
+}
+
+button {
+  border-color: #d14c45;
+  background-color: white;
+  color: #d14c45;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.image {
+  width: 30%;
+}
+
+.text {
+  width: 70%;
+}
