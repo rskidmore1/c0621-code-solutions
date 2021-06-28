@@ -16,7 +16,6 @@
   padding-bottom: 2rem;
   padding-top: 2rem;
   margin-bottom: 3rem;
-  width: ;
 }
 
 img {
@@ -28,7 +27,7 @@ img {
 }
 
 .logo-blue {
-  width: 25%;
+  width: 30%;
 }
 
 .nav {
@@ -47,15 +46,15 @@ a {
 }
 
 .contact {
-  padding-top: 0.6rem;
-  padding-bottom: 0.6rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
   background-color: #294464;
   border-radius: 5px;
   color: white;
 }
 
 .overlay {
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
+  background: linear-gradient(transparent, rgba(117, 117, 117, 0.767));
   width: 1000px;
   height: 500px;
 }
@@ -157,23 +156,23 @@ a {
 .readyheadline > p,
 a {
   font-family: 'Avenir', sans-serif;
-  color: white;
   line-height: 2rem;
 }
 
 .ready-button {
-  padding-top: 3rem;
+  padding-top: 2rem;
   text-align: right;
+  color: white;
 }
 
 .logo-white-address {
   text-align: left;
-  line-height: 1.3rem;
   padding-top: 1rem;
+  font-size: 0.9rem;
 }
 
 .logo-white-address > img {
-  width: 40%;
+  width: 50%;
   margin-bottom: 3rem;
 }
 
