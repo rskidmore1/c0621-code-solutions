@@ -54,7 +54,7 @@ a {
 }
 
 .overlay {
-  background: linear-gradient(transparent, rgba(117, 117, 117, 0.767));
+  background: rgba(0, 0, 0, 0.3);
   width: 1000px;
   height: 500px;
 }
@@ -116,6 +116,12 @@ a {
 
 .locations-section {
   color: #6e6e6e;
+  background-color: #fafafa;
+  width: 1080px;
+}
+
+.locations-border {
+  border-bottom: 1px solid #e7e9ec;
 }
 
 .locations-header {
@@ -153,8 +159,12 @@ a {
   font-family: 'Tiempos Headline', sans-serif;
 }
 
-.readyheadline > p,
-a {
+.readyheadline > p {
+  font-family: 'Avenir', sans-serif;
+  line-height: 2rem;
+}
+
+.readyheadline > a {
   font-family: 'Avenir', sans-serif;
   line-height: 2rem;
 }
@@ -173,7 +183,7 @@ a {
 
 .logo-white-address > img {
   width: 50%;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
 }
 
 .margin-offset {
@@ -187,13 +197,28 @@ a {
   padding-bottom: 5rem;
 }
 
+.address-padding {
+  line-height: 1.5rem;
+}
+
 .footer-links {
   width: calc(100% / 4);
   justify-content: center;
   color: white;
   font-family: 'Avenir', sans-serif;
   text-align: left;
-  align-content: right;
+  line-height: 2rem;
+}
+
+.footer-links > a {
+  text-decoration: none;
+  color: white;
+  margin-bottom: 4rem;
+}
+
+.footer-links > address > a {
+  text-decoration: none;
+  color: white;
 }
 
 .bottom-links {
