@@ -21,11 +21,16 @@ console.log('Random Hero: ', randomHero);
 
 var library = [{
   title: 'LOTR',
-  author: 'JRR Tolkien' },
-  { title: 'Mere christainity',
-  author: 'CS Louis' },
-  { title: 'Sexual Politics',
-  author: 'Kate Millett' }];
+  author: 'JRR Tolkien'
+},
+{
+  title: 'Mere christainity',
+  author: 'CS Louis'
+},
+{
+  title: 'Sexual Politics',
+  author: 'Kate Millett'
+}];
 
 var lastBook = library.pop();
 console.log('Last Book: ', lastBook);
