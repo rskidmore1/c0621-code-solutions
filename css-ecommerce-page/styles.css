@@ -1,0 +1,41 @@
+.container {
+  width: 1080px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  justify-content: center;
+  display: flex;
+}
+
+.col {
+  width: calc(100% / 5);
+}
+
+.title-text-row {
+  display: flex;
+}
+
+.title-text {
+
+}
+
+.product-title {
+}
+
+.product-size {
+  padding-left: 0.3rem;
+}
+
+.reduced-price{
+
+}
+
+.retail-price {
+  margin-left: 0.3rem;
+}
+
+img {
+  width: 100%;
+}
