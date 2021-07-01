@@ -11,7 +11,7 @@ function getNumbersToTen() {
   var numbers = [];
   var currentNumber = 1;
   for (var i = 0; i < 10; i++) {
-    numbers[i] = currentNumber;
+    numbers.push(currentNumber);
     currentNumber += 1;
   }
   return numbers;
