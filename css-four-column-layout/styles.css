@@ -1,0 +1,45 @@
+.container {
+  margin: 0 auto;
+  width: 1100px;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  flex-flow: wrap;
+}
+
+.inner-row {
+  width: calc(100% / 4);
+}
+
+.headline {
+  width: 100%;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+}
+
+.phone-img-div {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.icon-img {
+  width: 25%;
+}
+
+img {
+  width: 100%;
+}
+
+h3 {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 800;
+  margin-bottom: 1.8rem;
+}
+
+p {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+  font-size: small;
+}
