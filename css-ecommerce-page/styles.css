@@ -30,7 +30,9 @@
 }
 
 .product-size {
+  margin-left: 0.4rem;
   padding-left: 0.3rem;
+  border-left: 1px solid #d3d3d3;
 }
 
 .strike {
