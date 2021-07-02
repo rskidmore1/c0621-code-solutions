@@ -1,13 +1,12 @@
 /* exported filterOutStrings */
 function filterOutStrings(values) {
-  var tempValues = values;
-  values = [];
-  for (var i = 0; i < tempValues.length; i++) {
+  var output = [];
+  for (var i = 0; i < values.length; i++) {
 
-    if (typeof tempValues[i] !== 'string') {
-      var tempVal = tempValues[i];
-      values.push(tempVal);
+    if (typeof values[i] !== 'string') {
+      var tempVal = values[i];
+      output.push(tempVal);
     }
   }
-  return values;
+  return output;
 }

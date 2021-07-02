@@ -1,13 +1,12 @@
 /* exported filterOutNulls */
 function filterOutNulls(values) {
-  var tempValues = values;
-  values = [];
-  for (var i = 0; i < tempValues.length; i++) {
+  var output = [];
+  for (var i = 0; i < values.length; i++) {
+    var tempVal = values[i];
+    if (values[i] !== null) {
 
-    if (tempValues[i] !== null) {
-      var tempVal = tempValues[i];
-      values.push(tempVal);
+      output.push(tempVal);
     }
   }
-  return values;
+  return output;
 }
