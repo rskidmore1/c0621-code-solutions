@@ -1,5 +1,5 @@
 .container {
-  width: 1080px;
+  width: 1400px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -11,10 +11,15 @@
 
 .col {
   width: calc(100% / 5);
+  margin-left: 2rem;
 }
 
 .title-text-row {
   display: flex;
+}
+
+.reduce-lv-bag {
+  width: 97%;
 }
 
 .title-text {
@@ -28,6 +33,14 @@
   padding-left: 0.3rem;
 }
 
+.strike {
+  text-decoration: line-through;
+}
+
+.grey-text {
+  color: #d3d3d3;
+}
+
 .reduced-price{
 
 }
@@ -38,4 +51,15 @@
 
 img {
   width: 100%;
+  margin-bottom: 1rem;
+}
+
+span,
+p {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+}
+
+h1 {
+  font-family: "DM Sans", sans-serif;
 }
