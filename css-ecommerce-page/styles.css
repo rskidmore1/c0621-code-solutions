@@ -1,0 +1,62 @@
+.container {
+  width: 1400px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  justify-content: center;
+  display: flex;
+}
+
+.col {
+  width: calc(100% / 5);
+  margin-left: 2rem;
+}
+
+.title-text-row {
+  display: flex;
+}
+
+.reduce-lv-bag {
+  width: 97%;
+}
+
+.reduced-price-color {
+  background-color: #fdf2e8;
+  padding: 2px;
+  border-radius: 4px;
+}
+
+.product-size {
+  margin-left: 0.4rem;
+  padding-left: 0.3rem;
+  border-left: 1px solid #d3d3d3;
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
+.grey-text {
+  color: #d3d3d3;
+}
+
+.retail-price {
+  margin-left: 0.3rem;
+}
+
+img {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+span,
+p {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+}
+
+h1 {
+  font-family: "DM Sans", sans-serif;
+}
