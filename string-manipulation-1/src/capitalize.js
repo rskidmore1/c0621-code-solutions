@@ -7,6 +7,7 @@
 // Make first index upper value
 // Make follow index lower case
 // Push values to original word
+//Push values to original word
 // return word
 
 function capitalize(word) {
