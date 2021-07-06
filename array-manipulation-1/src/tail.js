@@ -1,18 +1,14 @@
 /* exported tail */
 
 // dec func
-// delete the first index in the array 
-// return the array arg
+// Dec array var arrayTail
+// Enter loop over length of arg array, start counter at 1 to skip the first index
+// Push itme to arrayTail
 
-function tail(array){
-  delete array[0]; 
+function tail(array) {
   var arrayTail = [];
-  for (var i = 0; i < array.length; i++){
-    if( i === 0 ){
-      null; 
-    } else {
-    arrayTail.push(array[i]); 
-    }
+  for (var i = 1; i < array.length; i++) {
+    arrayTail.push(array[i]);
   }
-  return arrayTail; 
+  return arrayTail;
 }

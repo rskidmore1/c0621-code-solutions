@@ -1,24 +1,18 @@
 /* exported compact */
 
-
-// dec func 
-// dec var array contains[] containing elements to omit: false, null, NaN, 0, -0, '',  
-// dec var array newArray[] to hold non-omited elements
-// Enters loop for arg array
-// Enters loop for var array, compareing array[i] to each item in contains[]
-//   Pushes non-omited elements new newArray[]
-// returns newArray[]
-
-//This ^ was all wrong HAHA
-
+// dec func
+// dec var array contains[] containing elements to omit: false, null, NaN, 0, -0, '',
+// dec array var newArray
+// Enter loop
+// change is each item in arg array is truthy with an if statement
+// Push items that are truthy to newArray
 
 function compact(array) {
-  var contains = [false, null, NaN, 0, -0, '']; 
-  var newArray = []; 
+  var newArray = [];
   for (var i = 0; i < array.length; i++) {
-    if (array[i]){
-      newArray.push(array[i]); 
+    if (array[i]) {
+      newArray.push(array[i]);
     }
   }
-  return newArray; 
+  return newArray;
 }
