@@ -7,6 +7,7 @@
 // Enters loop set to length of array with vowels
 // Compares to array of vowels
 // if char is equal to vowls array item, isVowel set equal to true and breaks loop
+// ...
 
 function isVowel(char) {
   var isVowel = false;
