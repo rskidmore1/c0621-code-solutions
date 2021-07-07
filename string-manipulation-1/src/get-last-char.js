@@ -8,6 +8,7 @@
 // find length of string
 // Subtract 1 from string length
 // get last element by index via bracket notation
+// ...
 
 function getLastChar(string) {
   var newString = '';

@@ -5,6 +5,7 @@
 // Declares array words
 // splits string by ' ' and assigns to words
 // returns words array
+// ...
 
 function getWords(string) {
   var words = null;

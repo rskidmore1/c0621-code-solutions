@@ -5,6 +5,7 @@
 // Iterate through loop
 // if letter is upper case set bool var to false
 //   Condition: is value of current letter equal to current letter set toLowerCase
+// ...
 
 function isLowerCased(word) {
   var lowercased = true;

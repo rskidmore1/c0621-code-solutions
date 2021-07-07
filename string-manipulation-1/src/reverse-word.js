@@ -5,6 +5,7 @@
 // decrement loop over word as Array
 // push values to reverseWord
 // return reverseWord
+// ...
 
 function reverseWord(word) {
   var revWord = '';

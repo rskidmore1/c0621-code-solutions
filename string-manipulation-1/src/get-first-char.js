@@ -4,6 +4,7 @@
 // take in string
 // declare new var
 // get first element by index via bracket notation
+// ...
 
 function getFirstChar(string) {
   var newString = '';
