@@ -26,7 +26,6 @@ function numVowels(string) {
       case 'u':
         counter++;
         break;
-      default:
 
     }
 
