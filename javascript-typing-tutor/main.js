@@ -42,3 +42,5 @@ playAgain.addEventListener('click', function (event) {
   performance.textContent = 'Misses: 0';
 
 });
+
+// Comments
