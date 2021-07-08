@@ -84,15 +84,14 @@ function renderPokemon(pokemon) {
   cardText.appendChild(pokeNum);
   cardText.appendChild(pokeDescription);
   pokemonCard.appendChild(cardText);
-
   thirdCol.appendChild(pokemonCard);
 
-  var insert = document.querySelector('.row');
-  insert.appendChild(thirdCol);
+  return thirdCol;
 
 }
-// renderPokemon(pokedex[0]);
+
+var insert = document.querySelector('.row');
 
 for (var i = 0; i < pokedex.length; i++) {
-  renderPokemon(pokedex[i]);
+  insert.appendChild(renderPokemon(pokedex[i]));
 }
