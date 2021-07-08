@@ -1,0 +1,23 @@
+* {
+  font-family: sans-serif;
+}
+
+.green-text {
+  color: green;
+  font-size: xx-large;
+}
+
+.red-text {
+  color: red;
+  font-size: 80pt;
+}
+
+.underline {
+  border-bottom: 4px solid black;
+}
+
+button {
+  padding: 0.5rem;
+  background-color: black;
+  color: white;
+}
