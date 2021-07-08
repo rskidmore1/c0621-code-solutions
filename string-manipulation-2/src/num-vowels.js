@@ -12,21 +12,12 @@ function numVowels(string) {
 
     switch (string[i].toLowerCase()) {
       case 'a':
-        counter++;
-        break;
       case 'e':
-        counter++;
-        break;
       case 'i':
-        counter++;
-        break;
       case 'o':
-        counter++;
-        break;
       case 'u':
         counter++;
         break;
-
     }
 
   }
