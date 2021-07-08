@@ -1,0 +1,33 @@
+.container {
+  width: auto;
+}
+
+.black {
+  background-color: black;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.circle {
+  position: absolute;
+  top: 15rem;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.off {
+  background-color: #1d1f24;
+}
+
+.white {
+  background-color: white;
+}
+
+.on {
+  background-color: rgb(240, 210, 45);
+  box-shadow: 0 0 30px 10px gold;
+}
