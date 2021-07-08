@@ -5,11 +5,11 @@ form.addEventListener('submit', function (event) {
   console.log('Form Submit');
 
   var formElements = {
-    name: document.forms[0].elements.name.value,
-    email: document.forms[0].elements.email.value,
-    message: document.forms[0].elements.message.value
+    name: form.elements.name.value,
+    email: form.elements.email.value,
+    message: form.elements.message.value
   };
   console.log('Form Elements: ', formElements);
-  document.forms[0].reset();
+  form.reset();
 
 });
