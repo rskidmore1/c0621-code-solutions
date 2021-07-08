@@ -1,11 +1,15 @@
 
 var clickButton = document.querySelector('.click-button');
-var dialog = document.getElementById('modal-window');
+var modalDiv = document.querySelector('.modal-div');
+var overLay = document.querySelector('.overlay-off');
+
 clickButton.addEventListener('click', function () {
-  dialog.showModal();
+  modalDiv.className = 'onscreen';
+  overLay.className = 'overlay-on';
 });
 
 var modalButton = document.querySelector('.modal-button');
 modalButton.addEventListener('click', function () {
-  dialog.close();
+  modalDiv.className = 'modal-div';
+  overLay.className = 'overlay-off';
 });
