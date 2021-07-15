@@ -22,8 +22,6 @@ describe('flatten(array)', function () {
     it('returns [1, 2, 3, 4, 5]', function () {
       var input = deepFreeze([[1], [2], 3, 4, [5]]);
       var output = flatten(input);
-      console.log('input: ', input);
-      console.log('output: ', output); 
       expect(output).to.deep.equal([1, 2, 3, 4, 5]);
     });
 
@@ -34,15 +32,13 @@ describe('flatten(array)', function () {
     it('returns [false, true, [false], true]', function () {
       var input = deepFreeze([false, [true, [false]], [true]]);
       var output = flatten(input);
-      console.log('input: ', input);
-      console.log('output: ', output);
+
       expect(output).to.deep.equal([false, true, [false], true]);
     });
 
   });
 
 });
-
 
 function deepFreeze(object) {
   // Retrieve the property names defined on object
@@ -53,7 +49,7 @@ function deepFreeze(object) {
   for (const name of propNames) {
     const value = object[name];
 
-    if (value && typeof value === "object") {
+    if (value && typeof value === 'object') {
       deepFreeze(value);
     }
   }
