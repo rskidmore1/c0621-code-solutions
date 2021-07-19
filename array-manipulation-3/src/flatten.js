@@ -18,3 +18,4 @@ function flatten(array) {
   }
   return finalArray;
 }
+//

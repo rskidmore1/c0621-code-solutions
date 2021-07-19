@@ -19,3 +19,4 @@ function equal(first, second) {
   }
   return isEqual;
 }
+//

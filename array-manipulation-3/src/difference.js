@@ -3,6 +3,7 @@
 // enter loop for first
 // if first[i] is not included in second push to diffArr
 // visa versa
+//
 
 function difference(first, second) {
   var diffArr = [];
