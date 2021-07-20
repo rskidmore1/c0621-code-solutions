@@ -11,6 +11,7 @@
 function titleCase(title) {
   var titleSplit = title.split(' ');
   var titleFinal = [];
+  var noCap = ['and', 'or', 'nor', 'but', 'a', 'as', 'at', 'by', 'for', 'in', 'of', 'on', 'per', 'to', 'the', 'an'];
   for (var i = 0; i < titleSplit.length; i++) {
     if (titleSplit[i].toLowerCase() === 'javascript') {
       titleFinal.push('JavaScript');
@@ -34,53 +35,9 @@ function titleCase(title) {
 
     } else if (titleSplit[i] === 'api') {
       titleFinal.push('API');
-    } else if (titleSplit[i] === 'and') {
-      titleFinal.push(titleSplit[i]);
 
-    } else if (titleSplit[i] === 'or') {
+    } else if (noCap.indexOf(titleSplit[i]) !== -1) {
       titleFinal.push(titleSplit[i]);
-
-    } else if (titleSplit[i] === 'nor') {
-      titleFinal.push(titleSplit[i]);
-
-    } else if (titleSplit[i] === 'but') {
-      titleFinal.push(titleSplit[i]);
-
-    } else if (titleSplit[i] === 'a') {
-      titleFinal.push(titleSplit[i]);
-
-    } else if (titleSplit[i] === 'as') {
-      titleFinal.push(titleSplit[i]);
-
-    } else if (titleSplit[i] === 'at') {
-      titleFinal.push(titleSplit[i]);
-
-    } else if (titleSplit[i] === 'by') {
-      titleFinal.push(titleSplit[i]);
-
-    } else if (titleSplit[i] === 'for') {
-      titleFinal.push(titleSplit[i]);
-
-    } else if (titleSplit[i] === 'in') {
-      titleFinal.push(titleSplit[i]);
-
-    } else if (titleSplit[i] === 'of') {
-      titleFinal.push(titleSplit[i]);
-
-    } else if (titleSplit[i] === 'on') {
-      titleFinal.push(titleSplit[i]);
-
-    } else if (titleSplit[i] === 'per') {
-      titleFinal.push(titleSplit[i]);
-
-    } else if (titleSplit[i] === 'to') {
-      titleFinal.push(titleSplit[i]);
-    } else if (titleSplit[i] === 'the') {
-      titleFinal.push(titleSplit[i]);
-
-    } else if (titleSplit[i] === 'an') {
-      titleFinal.push(titleSplit[i]);
-
     } else {
       titleFinal.push(titleSplit[i][0].toUpperCase() + titleSplit[i].slice(1, titleSplit[i].length));
 
