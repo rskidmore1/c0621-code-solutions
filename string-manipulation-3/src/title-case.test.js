@@ -25,6 +25,7 @@ describe('titleCase(string)', function () {
   });
 
   it('title cases "professional JavaScript for web developers', function () {
+
     var input = 'professional JavaScript for web developers';
     var output = titleCase(input);
     expect(output).to.equal('Professional JavaScript for Web Developers');

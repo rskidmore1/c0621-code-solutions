@@ -11,81 +11,83 @@
 function titleCase(title) {
   var titleSplit = title.split(' ');
   var titleFinal = [];
-
   for (var i = 0; i < titleSplit.length; i++) {
-    switch (titleSplit[i]) {
+    if (titleSplit[i].toLowerCase() === 'javascript') {
+      titleFinal.push('JavaScript');
 
-      case 'and':
-      case 'or':
-      case 'nor':
-      case 'but':
-      case 'a':
-      case 'as':
-      case 'at':
-      case 'by':
-      case 'for':
-      case 'in':
-      case 'of':
-      case 'on':
-      case 'per':
-      case 'to' :
-        titleFinal.push(titleSplit[i]);
-        break;
-      case 'an':
+    } else if (titleSplit[i].toLowerCase() === 'javascript:') {
+      titleFinal.push('JavaScript:');
 
-        if (i === 0) {
-          titleFinal.push(titleSplit[i][0].toUpperCase() + titleSplit[i].slice(1, titleSplit[i].length));
-        } else if (titleSplit[i - 1][titleSplit[i - 1].length - 1] === ':') {
-          titleFinal.push(titleSplit[i][0].toUpperCase() + titleSplit[i].slice(1, titleSplit[i].length));
-        } else {
-          titleFinal.push(titleSplit[i]);
-        }
-        break;
+    } else if (i === 0) {
+      titleFinal.push(titleSplit[i][0].toUpperCase() + titleSplit[i].slice(1, titleSplit[i].length));
 
-      case 'the':
-        if (i === 0) {
-          titleFinal.push(titleSplit[i][0].toUpperCase() + titleSplit[i].slice(1, titleSplit[i].length));
-        } else if (titleSplit[i - 1][titleSplit[i - 1].length - 1] === ':') {
-          titleFinal.push(titleSplit[i][0].toUpperCase() + titleSplit[i].slice(1, titleSplit[i].length));
-        } else {
-          titleFinal.push(titleSplit[i]);
-        }
+    } else if (i > 0 && titleSplit[i - 1].includes(':')) {
 
-        break;
+      titleFinal.push(titleSplit[i][0].toUpperCase() + titleSplit[i].slice(1, titleSplit[i].length));
 
-      case titleSplit[i].length < 5:
-        titleFinal.push(titleSplit[i]);
-        break;
+    } else if (titleSplit[i].includes('-') === true) {
+      var hyphSplit = titleSplit[i].split('-');
+      var hyphCapped = hyphSplit[0][0].toUpperCase() + hyphSplit[0].slice(1, hyphSplit[0].length) + '-' + hyphSplit[1][0].toUpperCase() + hyphSplit[1].slice(1, hyphSplit[1].length);
+      titleFinal.push(hyphCapped);
+    } else if (titleSplit[i].length > 3) {
+      titleFinal.push(titleSplit[i][0].toUpperCase() + titleSplit[i].slice(1, titleSplit[i].length));
 
-      case 'api':
-        titleFinal.push('API');
-        break;
-      case 'Javascript':
-        titleFinal.push('JavaScript');
-        break;
-      case 'javascript':
-        titleFinal.push('JavaScript');
-        break;
-      case 'JavaScript':
-        titleFinal.push('JavaScript');
-        break;
-      case 'Javascript:':
-        titleFinal.push('JavaScript:');
-        break;
-      case 'javascript:':
-        titleFinal.push('JavaScript:');
-        break;
+    } else if (titleSplit[i] === 'api') {
+      titleFinal.push('API');
+    } else if (titleSplit[i] === 'and') {
+      titleFinal.push(titleSplit[i]);
 
-      default:
-        if (titleSplit[i].includes('-') === true) {
-          var hyphSplit = titleSplit[i].split('-');
-          var hyphCapped = hyphSplit[0][0].toUpperCase() + hyphSplit[0].slice(1, hyphSplit[0].length) + '-' + hyphSplit[1][0].toUpperCase() + hyphSplit[1].slice(1, hyphSplit[1].length);
-          titleFinal.push(hyphCapped);
-        } else {
-          titleFinal.push(titleSplit[i][0].toUpperCase() + titleSplit[i].slice(1, titleSplit[i].length));
-        }
+    } else if (titleSplit[i] === 'or') {
+      titleFinal.push(titleSplit[i]);
+
+    } else if (titleSplit[i] === 'nor') {
+      titleFinal.push(titleSplit[i]);
+
+    } else if (titleSplit[i] === 'but') {
+      titleFinal.push(titleSplit[i]);
+
+    } else if (titleSplit[i] === 'a') {
+      titleFinal.push(titleSplit[i]);
+
+    } else if (titleSplit[i] === 'as') {
+      titleFinal.push(titleSplit[i]);
+
+    } else if (titleSplit[i] === 'at') {
+      titleFinal.push(titleSplit[i]);
+
+    } else if (titleSplit[i] === 'by') {
+      titleFinal.push(titleSplit[i]);
+
+    } else if (titleSplit[i] === 'for') {
+      titleFinal.push(titleSplit[i]);
+
+    } else if (titleSplit[i] === 'in') {
+      titleFinal.push(titleSplit[i]);
+
+    } else if (titleSplit[i] === 'of') {
+      titleFinal.push(titleSplit[i]);
+
+    } else if (titleSplit[i] === 'on') {
+      titleFinal.push(titleSplit[i]);
+
+    } else if (titleSplit[i] === 'per') {
+      titleFinal.push(titleSplit[i]);
+
+    } else if (titleSplit[i] === 'to') {
+      titleFinal.push(titleSplit[i]);
+    } else if (titleSplit[i] === 'the') {
+      titleFinal.push(titleSplit[i]);
+
+    } else if (titleSplit[i] === 'an') {
+      titleFinal.push(titleSplit[i]);
+
+    } else {
+      titleFinal.push(titleSplit[i][0].toUpperCase() + titleSplit[i].slice(1, titleSplit[i].length));
+
     }
+
   }
+
   var capString = titleFinal.join(' ');
 
   return capString;
