@@ -1,24 +1,23 @@
 console.log('Lodash is loaded:', typeof _ !== 'undefined');
 
-var player1 = {
-  name: 'Bob',
-  hand: []
-};
-
-var player2 = {
-  name: 'Sally',
-  hand: []
-};
-
-var player3 = {
-  name: 'Jeff',
-  hand: []
-};
-
-var player4 = {
-  name: '1950sfemalename',
-  hand: []
-};
+var players = [
+  {
+    name: 'Bob',
+    hand: []
+  },
+  {
+    name: 'Sally',
+    hand: []
+  },
+  {
+    name: 'Jeff',
+    hand: []
+  },
+  {
+    name: '1950sfemalename',
+    hand: []
+  }
+];
 
 var deck = [
   {
@@ -230,9 +229,38 @@ var deck = [
     rank: 'A'
   }
 ];
-
-function shuffle(array) {
-  return array.sort(() => Math.random() - 0.5);
+function shuffle(deckInput) {
+  return deckInput.sort(() => Math.random() - 0.5);
+  console.log('shuffle works');
 }
 
-console.log(shuffle(deck));
+function dealCards(deckShuffled, playersInput) {
+  var playersArr = playersInput;
+  console.log('from dealcards');
+  var lastCardDelt = 0;
+  console.log(players.length);
+  for (var i = 0; i < players.length; i++) {
+    console.log('from first loop');
+    for (var j = 0; j < 2; j++) {
+      console.log(deckShuffled[lastCardDelt]);
+      playersArr[i].hand.push(deckShuffled[lastCardDelt]);
+      lastCardDelt++;
+    }
+  }
+  return playersArr;
+}
+
+function determineWinner(playersInput) {
+
+}
+
+var gameDeck = shuffle(deck);
+
+dealCards(gameDeck, players);
+determineWinner(dealCards(gameDeck, players));
+
+// console.log('players: ', dealCards(gameDeck, players));
+
+// var shuffledDeck = shuffle(deck);
+
+// console.log(shuffle(deck));
