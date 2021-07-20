@@ -9,24 +9,11 @@ function union(first, second) {
   var array = first.concat(second);
 
   var uniqueArr = [];
-
   for (var i = 0; i < array.length; i++) {
+    if (uniqueArr.indexOf(array[i]) === -1) {
+      uniqueArr.push(array[i]);
 
-    for (var j = 0; j < array.length; j++) {
-      if (uniqueArr.includes(array[i]) === true) {
-        null;
-      } else if (i === j) {
-        uniqueArr.push(array[i]);
-        break;
-      } else if (array[i] === array[j]) {
-        null;
-
-      } else if (array[i] !== array[j]) {
-        uniqueArr.push(array[i]);
-        break;
-      }
     }
-
   }
   return uniqueArr;
 
