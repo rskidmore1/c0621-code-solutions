@@ -1,6 +1,5 @@
-
 var views = document.querySelectorAll('.view');
-
+var dots = document.querySelectorAll('.fa-circle');
 var counter = 0;
 
 function reversePanel() {
@@ -14,14 +13,17 @@ function reversePanel() {
 
   if (counter === 0) {
     views[counter.length - 1].classList.remove('hidden');
+    dots[counter.length - 1].className = 'fas fa-circle';
 
   } else {
     views[counter].classList.remove('hidden');
+    dots[counter].className = 'fas fa-circle';
   }
 
   for (var i = 0; i < views.length; i++) {
     if (i !== counter) {
       views[i].className = 'view hidden';
+      dots[i].className = 'far fa-circle';
     }
   }
 
@@ -36,13 +38,14 @@ function advancePanel() {
   }
 
   views[counter].classList.remove('hidden');
+  dots[counter].className = 'fas fa-circle';
 
   for (var i = 0; i < views.length; i++) {
     if (i !== counter) {
       views[i].className = 'view hidden';
+      dots[i].className = 'far fa-circle';
     }
   }
-  console.log(counter);
 
 }
 var rightIcon = document.querySelector('.fa-chevron-right');
