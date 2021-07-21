@@ -231,18 +231,13 @@ var deck = [
 ];
 function shuffle(deckInput) {
   return deckInput.sort(() => Math.random() - 0.5);
-  console.log('shuffle works');
 }
 
 function dealCards(deckShuffled, playersInput) {
   var playersArr = playersInput;
-  console.log('from dealcards');
   var lastCardDelt = 0;
-  console.log(players.length);
   for (var i = 0; i < players.length; i++) {
-    console.log('from first loop');
     for (var j = 0; j < 2; j++) {
-      console.log(deckShuffled[lastCardDelt]);
       playersArr[i].hand.push(deckShuffled[lastCardDelt]);
       lastCardDelt++;
     }
@@ -250,20 +245,46 @@ function dealCards(deckShuffled, playersInput) {
   return playersArr;
 }
 
-function determineWinner(playersInput) {
-  // var playersArr = playersInput;
-  // for (var i = 0; i < playersArr.length; i++) {
+function cardValue(card) {
+  var value = 0;
+  switch (card) {
+    case 'J':
+    case 'K':
+    case 'Q':
+      value = 10;
+      break;
+    case 'A':
+      value = 11;
+      break;
+    default:
+      value = card;
+      break;
 
-  // }
+  }
+  return value;
+}
+
+function determineWinner(playersInput) {
+  var playersArr = playersInput;
+  var totaledCards = [];
+
+  for (var i = 0; i < playersArr.length; i++) {
+
+    var totalValue = cardValue(playersArr[i].hand[1].rank) + cardValue(playersArr[i].hand[0].rank);
+    totaledCards.push(totalValue);
+  }
+
+  var largestCards = totaledCards[0];
+  for (i = 0; i <= largestCards; i++) {
+    if (totaledCards[i] > largestCards) {
+      largestCards = totaledCards[i];
+    }
+  }
+  var winningPlayer = totaledCards.indexOf(largestCards) + 1;
+  console.log('Winner is player', winningPlayer);
+
 }
 
 var gameDeck = shuffle(deck);
 
-dealCards(gameDeck, players);
 determineWinner(dealCards(gameDeck, players));
-
-// console.log('players: ', dealCards(gameDeck, players));
-
-// var shuffledDeck = shuffle(deck);
-
-// console.log(shuffle(deck));
