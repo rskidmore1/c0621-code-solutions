@@ -1,0 +1,36 @@
+.view-container {
+  margin: 0 auto;
+  text-align: center;
+  width: 800px;
+  border: 2px solid black;
+}
+
+.row {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+}
+
+.col {
+  width: calc(100% /3);
+}
+
+.center-width {
+  width: 80%;
+}
+
+.outer-width {
+  width: 10%;
+}
+
+.vertical-center {
+  margin-top: 30%;
+}
+
+.icon-size {
+  font-size: 3rem;
+}
+
+.hidden {
+  display: none;
+}
