@@ -1,16 +1,7 @@
-// grab view class
-// Make class that advances
-// set class on a timer
 
 var views = document.querySelectorAll('.view');
 
-// views[0].classList.add('hidden');
-// views[1].classList.remove('hidden');
-// console.log();
 var counter = 0;
-
-// unlock view with index of counter
-// make all the others hidden
 
 function reversePanel() {
 
@@ -21,11 +12,7 @@ function reversePanel() {
     counter--;
   }
 
-  console.log('view:', views[counter - 1]);
-  console.log('counter after decrement:', counter);
   if (counter === 0) {
-    console.log('views.length - 1', views.length - 1);
-    console.log('views[counter.length - 1]', views[counter.length - 1]);
     views[counter.length - 1].classList.remove('hidden');
 
   } else {
@@ -47,8 +34,7 @@ function advancePanel() {
   } else {
     counter++;
   }
-  console.log(views[counter]);
-  console.log(counter);
+
   views[counter].classList.remove('hidden');
 
   for (var i = 0; i < views.length; i++) {
