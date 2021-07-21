@@ -3,19 +3,18 @@
 function Bank() {
   this.nextAccountNumber = 1;
   this.accounts = [];
-  this.bank = { nextAccountNumber: this.nextAccountNumber, accounts: this.accounts };
 }
 
 Bank.prototype.openAccount = function (holder, balance) {
+  //
   this.balance = balance;
   this.holder = holder;
-  this.newAccount = [];
   var returnNumber = this.nextAccountNumber;
   if (Number.isInteger(this.balance)) {
     if (this.balance > 0) {
-      this.newAccount = new Account(this.nextAccountNumber, this.holder);
-      this.newAccount.deposit(this.balance);
-      this.accounts.push(this.newAccount);
+      var account = new Account(this.nextAccountNumber, this.holder);
+      account.deposit(this.balance);
+      this.accounts.push(account);
       this.nextAccountNumber++;
       return returnNumber;
     }
@@ -27,10 +26,10 @@ Bank.prototype.openAccount = function (holder, balance) {
 
 Bank.prototype.getAccount = function (number) {
 
-  this.number = number;
+  var num = number;
   var account = null;
   for (var i = 0; i < this.accounts.length; i++) {
-    if (this.accounts[i].number === this.number) {
+    if (this.accounts[i].number === num) {
       account = this.accounts[i];
 
     }
@@ -40,16 +39,16 @@ Bank.prototype.getAccount = function (number) {
 };
 
 Bank.prototype.getTotalAssets = function () {
-  this.totalAssets = 0;
+  var totalAssets = 0;
   if (this.accounts.length === 0) {
-    return this.totalAssets;
+    return totalAssets;
   } else {
     for (var i = 0; i < this.accounts.length; i++) {
       var actArr = this.getAccount(this.accounts[i].number);
 
-      this.totalAssets += actArr.getBalance();
+      totalAssets += actArr.getBalance();
 
     }
   }
-  return this.totalAssets;
+  return totalAssets;
 };
