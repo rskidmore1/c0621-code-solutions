@@ -1,12 +1,14 @@
-var h1 = document.querySelector('h1');
-var counter = 3;
+var h1Tag = document.querySelector('h1');
+var counter = h1Tag.textContent;
+
 function count() {
   if (counter > 0) {
-    h1.textContent = counter;
+    h1Tag.textContent = counter;
   } else {
-    h1.textContent = '~Earth Beeeelooowww Us~';
+    h1Tag.textContent = '~Earth Beeeelooowww Us~';
     clearInterval(intervalId);
   }
+
   counter--;
 }
-var intervalId = setInterval(count, 1000);
+var intervalId = setInterval(count, 1111);
