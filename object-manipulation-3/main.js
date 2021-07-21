@@ -251,7 +251,10 @@ function dealCards(deckShuffled, playersInput) {
 }
 
 function determineWinner(playersInput) {
+  // var playersArr = playersInput;
+  // for (var i = 0; i < playersArr.length; i++) {
 
+  // }
 }
 
 var gameDeck = shuffle(deck);
