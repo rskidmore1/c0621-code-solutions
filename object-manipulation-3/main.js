@@ -1,5 +1,5 @@
 console.log('Lodash is loaded:', typeof _ !== 'undefined');
-
+//comment
 var players = [
   {
     name: 'Bob',
