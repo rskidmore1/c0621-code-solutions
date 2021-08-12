@@ -3,7 +3,7 @@
 //-create del d
 //-crete update
 //-create make sure eveyrthing has a return request
-  //-pass things to file write
+  //-pass things to file write d
 //-clean things up
 //-put them into their own files
 
@@ -21,6 +21,7 @@ if (process.argv[2] === 'read'){
 }
 
 
+
 function read(){
   let data = jsonFile.notes;
   let output = '';
@@ -33,6 +34,14 @@ function read(){
 }
 
 
+function write(input) {
+  jsonFileStr = JSON.stringify(input, null, 2);
+  fs.writeFile('data.json', jsonFileStr, (err) => {
+    if (err) throw err;
+  })
+
+}
+
 //read data file
 //append input to data
 //write that data to file
@@ -41,15 +50,17 @@ function add(input){
 
   jsonFile.notes[jsonFile.nextId] = input;
   jsonFile.nextId++;
-
-  jsonFileStr = JSON.stringify(jsonFile, null, 2);
-
-  fs.writeFile('data.json', jsonFileStr, (err)=> {
-    if (err) throw err;
+  write(jsonFile);
 
 
 
-  })
+//   fs.writeFile('data.json', jsonFileStr, (err)=> {
+//     if (err) throw err;
+
+
+
+//   })
+// }
 }
 
 //read id to remove
@@ -73,14 +84,15 @@ function del(input){
   }
   // console.log(newNotes);
   jsonFile.notes = newNotes;
-  jsonFileStr = JSON.stringify(jsonFile, null, 2);
+  write(jsonFile)
+  // jsonFileStr = JSON.stringify(jsonFile, null, 2);
 
-  fs.writeFile('data.json', jsonFileStr, (err) => {
-    if (err) throw err;
+  // fs.writeFile('data.json', jsonFileStr, (err) => {
+  //   if (err) throw err;
 
 
 
-  })
+  // })
 
 }
 
@@ -97,15 +109,16 @@ function update(key, input) {
       jsonFile.notes[Object.keys(jsonFile.notes)[i]] = input;
     }
   }
+  write(jsonFile)
   // console.log(newNotes);
   // jsonFile.notes = newNotes
-  jsonFileStr = JSON.stringify(jsonFile, null, 2);
+  // jsonFileStr = JSON.stringify(jsonFile, null, 2);
 
-  fs.writeFile('data.json', jsonFileStr, (err) => {
-    if (err) throw err;
+  // fs.writeFile('data.json', jsonFileStr, (err) => {
+  //   if (err) throw err;
 
 
 
-  })
+  // })
 
 }
