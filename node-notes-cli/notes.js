@@ -13,11 +13,11 @@ const jsonFile = require('./data');
 if (process.argv[2] === 'read'){
   console.log(read());
 } else if (process.argv[2] === 'add') {
-  add(process.argv[3]);
+  write(add(process.argv[3]))
 } else if (process.argv[2] === 'delete'){
-  del(process.argv[3])
+  write(del(process.argv[3]))
 } else if (process.argv[2] === 'update') {
-  update(process.argv[3], process.argv[4])
+  write(update(process.argv[3], process.argv[4]))
 }
 
 
@@ -50,7 +50,8 @@ function add(input){
 
   jsonFile.notes[jsonFile.nextId] = input;
   jsonFile.nextId++;
-  write(jsonFile);
+  return jsonFile;
+  // write(jsonFile);
 
 
 
@@ -84,7 +85,8 @@ function del(input){
   }
   // console.log(newNotes);
   jsonFile.notes = newNotes;
-  write(jsonFile)
+  return jsonFile;
+  // write(jsonFile)
   // jsonFileStr = JSON.stringify(jsonFile, null, 2);
 
   // fs.writeFile('data.json', jsonFileStr, (err) => {
@@ -109,7 +111,8 @@ function update(key, input) {
       jsonFile.notes[Object.keys(jsonFile.notes)[i]] = input;
     }
   }
-  write(jsonFile)
+  return jsonFile;
+  // write(jsonFile)
   // console.log(newNotes);
   // jsonFile.notes = newNotes
   // jsonFileStr = JSON.stringify(jsonFile, null, 2);
