@@ -92,8 +92,6 @@ app.put('/api/grades/:gradeId', (req, res, next) => {
   `;
 
   const vals = [req.body.name, req.body.course, req.body.score, gradeId];
-  // const grade = result.rows[0];
-
   if (req.body.name === undefined || req.body.course === undefined || req.body.score > 100) {
     res.status(400).json({
       error: 'One or more inputs is mal-formed'
@@ -107,18 +105,14 @@ app.put('/api/grades/:gradeId', (req, res, next) => {
             error: `Cannot find grade with "gradeId" ${gradeId}`
           });
         } else {
-
           res.status(200).json(grade);
-
         }
-
       })
       .catch(err => {
         console.error(err);
         res.status(500).json({
           error: 'Query failed'
         });
-
       });
   }
 });
@@ -149,9 +143,7 @@ app.delete('/api/grades/:gradeId', (req, res, next) => {
           error: `Cannot find grade with "gradeId" ${gradeId}`
         });
       } else {
-
         res.status(204).json(grade);
-
       }
 
     })
@@ -160,11 +152,8 @@ app.delete('/api/grades/:gradeId', (req, res, next) => {
       res.status(500).json({
         error: 'Query failed'
       });
-
     });
-
 });
 
 app.listen(3000, function () {
-  // console.log('Listening on port 3000');
 });
