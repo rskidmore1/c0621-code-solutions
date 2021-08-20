@@ -17,7 +17,7 @@ app.get('/api/grades', (req, res, next) => {
 
   db.query(sql)
     .then(results => {
-      const grade = results.rows;
+      const grade = results.rows[0];
       if (!grade) {
         res.status(200).json({
           noResults: 'There are no grades'
@@ -59,7 +59,7 @@ app.post('/api/grades', (req, res, next) => {
   } else {
     db.query(sql, vals)
       .then(results => {
-        const grade = results.rows;
+        const grade = results.rows[0];
         res.status(201).json(grade);
 
       })
