@@ -42,7 +42,7 @@ const balance = account.reduce(function (allNames, name) {
 console.log(balance);
 
 const composite = traits.reduce(function (allTraits, trait) {
-  allTraits[Object.keys(trait)] = trait[Object.keys(trait)];
+  Object.assign(allTraits, trait);
   return allTraits;
 }, {});
 console.log(composite);
