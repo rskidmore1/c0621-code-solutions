@@ -35,20 +35,10 @@ app.get('/api/grades', (req, res, next) => {
     });
 });
 
-// -Need to create query
-// -query will need input
-
-// -Need to create putting into database
-// -need to create responses
-// -sanitifze the data with $1
 app.use(express.json());
 
 app.post('/api/grades', (req, res, next) => {
-  // res.json(req.body.name);
   const sql =
-  // select *
-  // from "grades"`;
-
   `insert into "grades"
       ("name",
       "course",
@@ -60,8 +50,7 @@ app.post('/api/grades', (req, res, next) => {
       )
       returning*;
   `;
-  // const score = parseInt(req.body.score, 10);
-  // const score = Number(req.body.score);
+
   const vals = [req.body.name, req.body.course, req.body.score];
   if (req.body.name === undefined || req.body.course === undefined || req.body.score > 100) {
     res.status(400).json({
