@@ -6,8 +6,6 @@ function CustomButton(props) {
   return <button>{props.text}</button>;
 }
 
-// const CustomButton = <button></button>;
-
 const element = (
   <div>
     <CustomButton text="I" />
