@@ -21,11 +21,14 @@ class Toggle extends React.Component {
     const isToggled = this.state.isToggled;
     let button;
     if (isToggled) {
-      // isToggled = false;
-      button = <i onClick={this.clickHandle} className="fas fa-toggle-on"></i>;
-    } else {
-      button = <i onClick={this.clickHandle} className="fas fa-toggle-off"></i>;
 
+      button = <div className="toggle-on" >
+        <div className="dot-on" onClick={this.clickHandle}></div>
+      </div>;
+    } else {
+      button = <div className="toggle-off" onClick={this.clickHandle}>
+        <div className="dot-off"></div>
+      </div>;
     }
 
     return (
