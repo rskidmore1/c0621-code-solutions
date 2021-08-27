@@ -1,3 +1,17 @@
 .hidden {
   display: none !important;
 }
+
+.name-div {
+  border: 1px solid black;
+  width: 200px;
+  background-color: lightgray;
+  cursor: crosshair;
+}
+
+.description {
+  border: 1px solid black;
+  width: 200px;
+  background-color: white;
+  cursor: default;
+}
