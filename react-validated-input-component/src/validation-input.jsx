@@ -3,7 +3,7 @@ import React from 'react';
 class MainForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { value: '', message: '', check: '' };
+    this.state = { value: '', message: 'A password is required', check: 'fas fa-times' };
 
     this.handleChange = this.handleChange.bind(this);
 
@@ -12,11 +12,7 @@ class MainForm extends React.Component {
   handleChange(event) {
 
     this.setState({ value: event.target.value });
-
-    if (this.state.value === '') {
-      this.setState({ message: 'A password is required' });
-      this.setState({ check: 'fas fa-times' });
-    } else if (this.state.value.length < 8) {
+    if (this.state.value.length < 8) {
       this.setState({ message: 'Your password is too short' });
       this.setState({ check: 'fas fa-times' });
 
