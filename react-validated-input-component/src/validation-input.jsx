@@ -6,7 +6,6 @@ class MainForm extends React.Component {
     this.state = { value: '', message: '', check: '' };
 
     this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
 
   }
 
@@ -14,9 +13,6 @@ class MainForm extends React.Component {
 
     this.setState({ value: event.target.value });
 
-  }
-
-  handleSubmit(event) {
     if (this.state.value === '') {
       this.setState({ message: 'A password is required' });
       this.setState({ check: 'fas fa-times' });
@@ -30,8 +26,6 @@ class MainForm extends React.Component {
 
     }
 
-    event.preventDefault();
-
   }
 
   render() {
@@ -44,8 +38,6 @@ class MainForm extends React.Component {
 
           </label><i className={this.state.check}></i>
 
-          <br></br>
-          <button type="submit" >Submit</button>
         </form>
         <p>{this.state.message}</p>
       </div>
