@@ -17,34 +17,6 @@ a {
   color: black;
 }
 
-i {
-  /* transform: scale(1);
-  transition: transform 3s; */
-
-  /* transform: left(0);
-  transition: transform 3s; */
-
-  /* transition-property: right, left;
-  transition-duration: 50s;
-  -webkit-transition-property: right, left; /* Safari */
-
-  /* -webkit-transition-duration: 50s;
-  position: absolute; */
-
-  /* left: 0; */
-}
-
-i:hover {
-  right: 0;
-
-  /* left: 20px;
-  transition: left 1s; */
-
-  /* transform: left(20px); */
-
-  /* transition: all 0.5s ease-in-out; */
-}
-
 li {
   margin-top: 1rem;
 }
@@ -58,25 +30,47 @@ h2 {
   margin-inline-end: 0; */
 }
 
+i {
+  position: absolute;
+}
+
 .nav-div {
-  /* border: 1px solid black; */
   width: 100px;
   background-color: white;
   border: 0;
   height: 100vh;
+  position: relative;
+  left: -100px;
+  transition: left 0.5s linear;
+
+  /* transition: translateX(100px) 3s; */
+}
+
+.nav-div.on-screen {
+  /* border: 1px solid black; */
+
+  left: 0;
+  transition: left 0.5s linear;
 
   /* transform: scale(1);
   transition: transform 3s; */
-  transform: translateX(100%);
+
+  /* transform: translateX(100%); */
 
   /* Transition our horizontal slide */
-  transition: transform ease-out 0.3s;
+
+  /* transition: transform ease-out 0.3s; */
 }
 
 .nav-div:active {
-  /* transform: scale(1.1); */
-
-  /* left: 0;
-  transition: 45s; */
-  transform: translateX(0);
+  /* transform: scale(1.1);
+  left: 0;
+  transition: 45s;
+  transform: translateX(0); */
 }
+
+/* .box {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+} */

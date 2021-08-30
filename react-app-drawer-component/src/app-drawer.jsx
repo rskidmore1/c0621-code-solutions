@@ -35,12 +35,12 @@ class Drawer extends React.Component {
       // console.log('if button');
 
       button = <div>
-      <div className="hidden">
+      <div className="">
 
           <i className="fas fa-bars" onClick={this.toggle}></i>
 
         </div>
-      <div className="nav-div">
+        <div className="nav-div on-screen">
         <h2>Menu</h2>
         <nav>
           <ul>
@@ -61,7 +61,7 @@ class Drawer extends React.Component {
         <i className="fas fa-bars" onClick={this.toggle}></i>
 
       </div>
-      <div className="nav-div hidden" >
+        <div className="nav-div " >
         <h2>Menu</h2>
         <nav>
           <ul>
