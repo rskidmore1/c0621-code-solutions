@@ -7,8 +7,6 @@ const pathName = path.join(__dirname, 'public');
 
 console.log(pathName);
 
-// const staticVar = express.static(pathName);
-
 const mountUse = app.use(express.static(pathName));
 
 app.get('/', function (req, res) {
