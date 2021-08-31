@@ -39,7 +39,7 @@ export default class App extends React.Component {
     * TIP: Use Array.prototype.concat to create a new array containing the contents
     * of the old array, plus the object returned by the server.
     */
-    const todos = this.state.todos;
+    const todos = this.state.todos.slice();
     fetch('http://localhost:3000/api/todos', {
       method: 'POST',
       headers: {
@@ -57,20 +57,20 @@ export default class App extends React.Component {
 
   toggleCompleted(todoId) {
 
-    const allState = this.state.todos;
+    const allState = this.state.todos.slice();
     let newCompleted;
+    let index;
     for (let i = 0; i < allState.length; i++) {
       if (allState[i].todoId === todoId) {
         newCompleted = allState[i];
+        index = i;
       }
     }
 
     let newIsComplete = {};
     if (newCompleted.isCompleted) {
-      newCompleted.isCompleted = false;
       newIsComplete = { isCompleted: false };
     } else if (!newCompleted.isCompleted) {
-      newCompleted.isCompleted = true;
       newIsComplete = { isCompleted: true };
     }
 
@@ -83,7 +83,8 @@ export default class App extends React.Component {
     })
       .then(res => res.json())
       .then(data => {
-        this.setState(data);
+        allState[index] = data;
+        this.setState({ todos: allState });
       });
 
     /**
