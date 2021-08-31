@@ -93,19 +93,14 @@ app.get('/api/grades/:gradeId', (req, res, next) => {
       const [grade] = result.rows;
       if (!grade) {
         throw new ClientError(404, `cannot find grade with gradeId ${gradeId}`);
-        // res.status(404).json({
-        //   error: `cannot find grade with gradeId ${gradeId}`
-        // });
+
       } else {
         res.json(grade);
       }
     })
     .catch(err => {
       next(err);
-      // console.error(err);
-      // res.status(500).json({
-      //   error: 'an unexpected error occurred'
-      // });
+
     });
 });
 
@@ -113,19 +108,13 @@ app.put('/api/grades/:gradeId', (req, res, next) => {
   const gradeId = parseInt(req.params.gradeId, 10);
   if (!Number.isInteger(gradeId) || gradeId < 1) {
     throw new ClientError(400, 'grade must be a positive integer');
-    // res.status(400).json({
-    //   error: 'grade must be a positive integer'
-    // });
-    // return;
+
   }
   const { name, course } = req.body;
   const score = parseInt(req.body.score, 10);
   if (!name || !course || !score) {
     throw new ClientError(400, 'name, course, and score are required fields');
-    // res.status(400).json({
-    //   error: 'name, course, and score are required fields'
-    // });
-    // return;
+
   }
   const sql = `
     update "grades"
@@ -141,19 +130,14 @@ app.put('/api/grades/:gradeId', (req, res, next) => {
       const [updatedGrade] = result.rows;
       if (!updatedGrade) {
         throw new ClientError(400, `cannot find grade with gradeId ${gradeId}`);
-        // res.status(404).json({
-        //   error: `cannot find grade with gradeId ${gradeId}`
-        // });
+
       } else {
         res.json(updatedGrade);
       }
     })
     .catch(err => {
       next(err);
-      // console.error(err);
-      // res.status(500).json({
-      //   error: 'an unexpected error occurred'
-      // });
+
     });
 });
 
@@ -161,10 +145,7 @@ app.delete('/api/grades/:gradeId', (req, res, next) => {
   const gradeId = parseInt(req.params.gradeId, 10);
   if (!Number.isInteger(gradeId) || gradeId < 1) {
     throw new ClientError(400, 'grade must be a positive integer');
-    // res.status(400).json({
-    //   error: 'grade must be a positive integer'
-    // });
-    // return;
+
   }
   const sql = `
     delete from "grades"
@@ -177,19 +158,14 @@ app.delete('/api/grades/:gradeId', (req, res, next) => {
       const [deletedGrade] = result.rows;
       if (!deletedGrade) {
         throw new ClientError(400, `cannot find grade with gradeId ${gradeId}`);
-        // res.status(404).json({
-        //   error: `cannot find grade with gradeId ${gradeId}`
-        // });
+
       } else {
         res.sendStatus(204);
       }
     })
     .catch(err => {
       next(err);
-      // console.error(err);
-      // res.status(500).json({
-      //   error: 'an unexpected error occurred'
-      // });
+
     });
 });
 
