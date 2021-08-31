@@ -39,7 +39,7 @@ export default class App extends React.Component {
     * TIP: Use Array.prototype.concat to create a new array containing the contents
     * of the old array, plus the object returned by the server.
     */
-
+    const todos = this.state.todos;
     fetch('http://localhost:3000/api/todos', {
       method: 'POST',
       headers: {
@@ -47,13 +47,24 @@ export default class App extends React.Component {
       },
       body: JSON.stringify(newTodo)
     })
-      .then(res => res.json());
+      .then(res => res.json())
+      .then(data => {
+        todos.push(data);
+        this.setState({ todos: todos });
+      });
 
   }
 
   toggleCompleted(todoId) {
 
-    const newCompleted = this.state.todos[todoId - 1];
+    const allState = this.state.todos;
+    let newCompleted;
+    for (let i = 0; i < allState.length; i++) {
+      if (allState[i].todoId === todoId) {
+        newCompleted = allState[i];
+      }
+    }
+
     let newIsComplete = {};
     if (newCompleted.isCompleted) {
       newCompleted.isCompleted = false;
@@ -72,8 +83,9 @@ export default class App extends React.Component {
     })
       .then(res => res.json())
       .then(data => {
-        this.setState(newCompleted);
+        this.setState(data);
       });
+
     /**
      * Find the index of the todo with the matching todoId in the state array.
      * Get its "isCompleted" status.
