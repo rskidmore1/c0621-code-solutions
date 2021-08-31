@@ -1,17 +1,5 @@
 import React from 'react';
 
-// Sudos code
-// Make a toggle
-// closed is hamberger
-// open is menu
-// need some transforms
-
-// todo
-// -toggle
-// -closed menu
-// -opened menu
-// -transitions
-
 class Drawer extends React.Component {
   constructor(props) {
     super(props);
@@ -21,10 +9,8 @@ class Drawer extends React.Component {
 
   toggle() {
     if (this.state.isOpen) {
-      // console.log('if toggle');
       this.setState({ isOpen: false });
     } else {
-      // console.log('else toggle');
       this.setState({ isOpen: true });
     }
   }
@@ -32,7 +18,6 @@ class Drawer extends React.Component {
   render() {
     let button;
     if (this.state.isOpen) {
-      // console.log('if button');
 
       button = <div>
       <div className="">
@@ -41,37 +26,34 @@ class Drawer extends React.Component {
 
         </div>
         <div className="nav-div on-screen">
-        <h2>Menu</h2>
-        <nav>
+          <h2 onClick={this.toggle}>Menu</h2>
+          <div>
           <ul>
-            <li><a href="" onClick={this.toggle}>About</a></li>
-            <li><a href="" onClick={this.toggle}>Get Started</a></li>
-            <li><a href="" onClick={this.toggle}>Sign In</a></li>
+              <li><p onClick={this.toggle}>About</p></li>
+              <li><p onClick={this.toggle}>Get Started</p></li>
+              <li><p onClick={this.toggle}>Sign In</p></li>
           </ul>
 
-          {/* <i className="fas fa-bars" onClick={this.toggle}></i> */}
-        </nav>
+         </div>
       </div>
       </div>;
-    } else {
-      // console.log('else button');
+    } else if (!this.state.isOpen) {
       button = <div>
        <div>
 
         <i className="fas fa-bars" onClick={this.toggle}></i>
 
       </div>
-        <div className="nav-div " >
-        <h2>Menu</h2>
-        <nav>
+        <div className="nav-div off-screen" >
+          <h2 onClick={this.toggle}>Menu</h2>
+        <div>
           <ul>
-            <li><a href="" onClick={this.toggle}>About</a></li>
-            <li><a href="" onClick={this.toggle}>Get Started</a></li>
-            <li><a href="" onClick={this.toggle}>Sign In</a></li>
+            <li><p onClick={this.toggle}>About</p></li>
+            <li><p onClick={this.toggle}>Get Started</p></li>
+            <li><p onClick={this.toggle}>Sign In</p></li>
           </ul>
 
-          {/* <i className="fas fa-bars" onClick={this.toggle}></i> */}
-        </nav>;
+         </div>;
 
         </div>
       </div>;
