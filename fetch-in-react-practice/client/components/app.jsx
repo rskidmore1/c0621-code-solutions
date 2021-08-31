@@ -67,19 +67,14 @@ export default class App extends React.Component {
       }
     }
 
-    let newIsComplete = {};
-    if (newCompleted.isCompleted) {
-      newIsComplete = { isCompleted: false };
-    } else if (!newCompleted.isCompleted) {
-      newIsComplete = { isCompleted: true };
-    }
+    const newIsCompleted = { isCompleted: !newCompleted.isCompleted };
 
     fetch('http://localhost:3000/api/todos/' + todoId, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(newIsComplete)
+      body: JSON.stringify(newIsCompleted)
     })
       .then(res => res.json())
       .then(data => {
