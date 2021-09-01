@@ -69,7 +69,7 @@ app.post('/api/auth/sign-in', (req, res, next) => {
             } else {
               const payload = { userInfo: { userId: returnRes.userId, hashedPassword: returnRes.hashedPassword } };
               const token = jwt.sign(payload, process.env.TOKEN_SECRET);
-              res.status(200).json({ message: { payload: payload, token: token } });
+              res.status(200).json({ message: { userId: payload.userInfo.userId, token: token } });
             }
           })
           .catch(err => {
