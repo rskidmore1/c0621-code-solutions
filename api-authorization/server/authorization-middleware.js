@@ -5,7 +5,7 @@ function authorizationMiddleware(req, res, next) { // This will be called later
   /* your code here */
 
   if (!req.headers['x-access-token']) {
-    res.status(401).json({ mesage: 'authentication required' });
+    throw new ClientError(401, 'authentication required');
   } else {
     const token = req.headers['x-access-token'];
 
