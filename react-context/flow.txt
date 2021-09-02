@@ -1,0 +1,16 @@
+User can sign up.
+Enter username and password> Sends post request to server> inserts user into data base
+
+
+User can sign in.
+handleSignIn sets user. Request sent to server at /api/auth/${action}. 
+Once user in state is set home.jsx redirects sign-in to the rick rock gif 
+
+
+User can stay signed in (even if they refresh the page).
+handleSignIn sets token in local storage 
+
+
+User can sign out.
+handleSignOut removes token from local storage
+Sets user in state to null 
