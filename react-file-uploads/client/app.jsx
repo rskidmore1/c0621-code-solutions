@@ -7,6 +7,26 @@ export default class App extends React.Component {
   }
 
   handleSubmit(event) {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    console.log(formData);
+
+    // fetch('/api/images')
+    //   .then(response => response.json())
+    //   .then(data => console.log(data));
+
+    fetch('/api/uploads', {
+      method: 'POST',
+      body: formData
+    })
+      .then(response => response.json())
+      .then(result => {
+        console.log('Success:', result);
+        event.target.reset();
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
     /**
      * - prevent the browser from performing default form submission behavior
      * - create a new FormData object, passing in the event.target
