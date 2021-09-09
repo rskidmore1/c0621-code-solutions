@@ -3,39 +3,41 @@ import React from 'react';
 class MainForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { value: '', message: 'A password is required', check: 'fas fa-times' };
-
+    this.state = { value: '' };
     this.handleChange = this.handleChange.bind(this);
 
   }
 
   handleChange(event) {
-
     this.setState({ value: event.target.value });
-    if (this.state.value.length < 8) {
-      this.setState({ message: 'Your password is too short' });
-      this.setState({ check: 'fas fa-times' });
-
-    } else {
-      this.setState({ check: 'fas fa-check' });
-      this.setState({ message: '' });
-
-    }
-
   }
 
   render() {
+
+    let message = 'A password is required';
+    let check = 'fas fa-times';
+    if (this.state.value.length < 8) {
+
+      check = 'fas fa-times';
+      message = 'Your password is too short';
+
+    } else {
+
+      check = 'fas fa-check';
+      message = '';
+
+    }
+
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
           <label>
             Password:<br></br>
             <input type="password" value={this.state.value} onChange={this.handleChange} />
-
-          </label><i className={this.state.check}></i>
+          </label><i className={check}></i>
 
         </form>
-        <p>{this.state.message}</p>
+        <p>{message}</p>
       </div>
     );
   }
