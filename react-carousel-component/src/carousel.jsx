@@ -5,22 +5,10 @@ class Images extends React.Component {
   constructor(props) {
     super(props);
     this.state = { count: 1 };
-    this.count = this.count.bind(this);
     this.advance = this.advance.bind(this);
     this.backwards = this.backwards.bind(this);
     this.iconClick = this.iconClick.bind(this);
 
-  }
-
-  count() {
-    let increase = this.state.count;
-    if (increase < 5) {
-      increase++;
-      this.setState({ count: increase });
-    } else {
-      increase = 1;
-      this.setState({ count: increase });
-    }
   }
 
   iconClick(event) {
@@ -32,7 +20,7 @@ class Images extends React.Component {
   advance() {
 
     let increase = this.state.count;
-    if (increase < 5) {
+    if (increase < this.props.poke.length) {
       increase = increase + 1;
       this.setState({ count: increase });
     } else {
@@ -46,7 +34,7 @@ class Images extends React.Component {
     let backcount = this.state.count;
 
     if (backcount === 1) {
-      backcount = 5;
+      backcount = this.props.poke.length;
       this.setState({ count: backcount });
     } else {
       backcount--;
@@ -68,6 +56,7 @@ class Images extends React.Component {
     return (
       <React.Fragment>
         <div className="row">
+
           <React.Fragment>
             <div className="col outer-width vertical-center"><i className="fas fa-chevron-left icon-size" onClick={this.backwards}></i></div>
           </React.Fragment>
