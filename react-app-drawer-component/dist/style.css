@@ -1,0 +1,49 @@
+
+.hidden {
+  display: none !important;
+}
+
+body {
+  background-color: lightgray;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  margin-top: 1rem;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+i {
+  position: absolute;
+}
+
+.nav-div {
+  width: 100px;
+  background-color: white;
+  border: 0;
+  height: 100vh;
+  position: relative;
+  left: -100px;
+  transition: left 1s linear;
+}
+
+p {
+  cursor: pointer;
+}
+
+.nav-div.off-screen {
+  left: -100px;
+  transition: left 1s linear;
+}
+
+.nav-div.on-screen {
+  left: 0;
+  transition: left 1s linear;
+}
