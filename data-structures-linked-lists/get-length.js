@@ -4,7 +4,7 @@ function getLength(list) {
   let count = 1;
 
   let current = list.next;
-  while (current) { // while not null
+  while (current) {
     count++;
     current = current.next;
   }
